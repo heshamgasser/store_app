@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:store_app/cubits/home_layout_cubit/home_layout_state.dart';
+import 'package:store_app/views/category_screen.dart';
 import 'package:store_app/views/home_screen.dart';
 import '../../views/cart_screen.dart';
 import '../../views/favorites_screen.dart';
@@ -16,6 +17,7 @@ class HomeLayoutCubit extends Cubit<HomeLayoutStates> {
   int selectedIndex = 0;
   List<Widget> tabs = [
     HomeScreen(),
+    CategoryScreen(),
     SearchScreen(),
     CartScreen(),
     FavoritesScreen(),
