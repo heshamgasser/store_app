@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:store_app/cubits/home_layout_cubit/home_layout_state.dart';
 import 'package:store_app/views/category_screen.dart';
 import 'package:store_app/views/home_screen.dart';
@@ -11,7 +12,7 @@ import '../../views/search_screen.dart';
 class HomeLayoutCubit extends Cubit<HomeLayoutStates> {
   HomeLayoutCubit() : super(HomeLayoutInitialState());
 
-  static HomeLayoutCubit get(context) => HomeLayoutCubit();
+  static HomeLayoutCubit get(context) => BlocProvider.of<HomeLayoutCubit>(context);
 
 
   int selectedIndex = 0;

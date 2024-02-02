@@ -18,8 +18,8 @@ class HomeLayout extends StatelessWidget {
           // TODO: implement listener
         },
         builder: (context, state) {
-          var homeBloc =
-              BlocProvider.of<HomeLayoutCubit>(context, listen: true);
+          // var homeBloc =
+          //     BlocProvider.of<HomeLayoutCubit>(context, listen: true);
 
           return Scaffold(
             appBar: AppBar(
@@ -35,12 +35,12 @@ class HomeLayout extends StatelessWidget {
               ],
             ),
             bottomNavigationBar: BottomNavigationBar(
-              currentIndex: homeBloc.selectedIndex,
+              currentIndex: HomeLayoutCubit.get(context).selectedIndex,
               onTap: (value) {
                 //   add changeIndex Function
-                homeBloc.changeIndex(indexValue: value);
+                HomeLayoutCubit.get(context).changeIndex(indexValue: value);
                 log(value.toString());
-                log(homeBloc.selectedIndex.toString());
+                log(HomeLayoutCubit.get(context).selectedIndex.toString());
               },
               items: [
                 BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
@@ -56,7 +56,7 @@ class HomeLayout extends StatelessWidget {
                     icon: Icon(Icons.person), label: 'Profile'),
               ],
             ),
-            body: homeBloc.tabs[homeBloc.selectedIndex],
+            body: HomeLayoutCubit.get(context).tabs[HomeLayoutCubit.get(context).selectedIndex],
           );
         },
       ),
