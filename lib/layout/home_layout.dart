@@ -39,8 +39,6 @@ class HomeLayout extends StatelessWidget {
               onTap: (value) {
                 //   add changeIndex Function
                 HomeLayoutCubit.get(context).changeIndex(indexValue: value);
-                log(value.toString());
-                log(HomeLayoutCubit.get(context).selectedIndex.toString());
               },
               items: [
                 BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
