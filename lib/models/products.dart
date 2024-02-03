@@ -61,6 +61,7 @@ class Rating {
     rate = json['rate'];
     count = json['count'];
   }
+
   num? rate;
   num? count;
 

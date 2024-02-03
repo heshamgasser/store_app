@@ -31,8 +31,8 @@ class ItemWidget extends StatelessWidget {
                   child: CachedNetworkImage(
                     fit: BoxFit.fill,
                     imageUrl: product.image ?? '',
-                    progressIndicatorBuilder: (context, url, downloadProgress) =>
-                        Center(
+                    progressIndicatorBuilder:
+                        (context, url, downloadProgress) => Center(
                       child: CircularProgressIndicator(
                           value: downloadProgress.progress),
                     ),

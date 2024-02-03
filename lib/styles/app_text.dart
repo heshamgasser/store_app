@@ -42,11 +42,12 @@ class AppText {
 
   static TextStyle darkBodyMedium = GoogleFonts.poppins(
       fontSize: 16.sp, color: Colors.blueAccent, fontWeight: FontWeight.bold);
+
 //
-static TextStyle lightBodySmall = GoogleFonts.poppins(
-    fontSize: 14.sp, color: Colors.black, fontWeight: FontWeight.bold);
-static TextStyle darkBodySmall = GoogleFonts.poppins(
-    fontSize: 14.sp, color: Colors.black, fontWeight: FontWeight.bold);
+  static TextStyle lightBodySmall = GoogleFonts.poppins(
+      fontSize: 14.sp, color: Colors.black, fontWeight: FontWeight.bold);
+  static TextStyle darkBodySmall = GoogleFonts.poppins(
+      fontSize: 14.sp, color: Colors.black, fontWeight: FontWeight.bold);
 //
 // static TextStyle lightLabelLarge = GoogleFonts. ;
 // static TextStyle darkLabelLarge = GoogleFonts. ;

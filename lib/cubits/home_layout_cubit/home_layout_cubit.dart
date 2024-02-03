@@ -12,8 +12,8 @@ import '../../views/search_screen.dart';
 class HomeLayoutCubit extends Cubit<HomeLayoutStates> {
   HomeLayoutCubit() : super(HomeLayoutInitialState());
 
-  static HomeLayoutCubit get(context) => BlocProvider.of<HomeLayoutCubit>(context);
-
+  static HomeLayoutCubit get(context) =>
+      BlocProvider.of<HomeLayoutCubit>(context);
 
   int selectedIndex = 0;
   List<Widget> tabs = [
@@ -24,8 +24,6 @@ class HomeLayoutCubit extends Cubit<HomeLayoutStates> {
     FavoritesScreen(),
     ProfileScreen(),
   ];
-
-
 
   void changeIndex({required int indexValue}) {
     selectedIndex = indexValue;

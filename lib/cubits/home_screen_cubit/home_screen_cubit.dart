@@ -15,7 +15,6 @@ class HomeScreenCubit extends Cubit<HomeScreenState> {
 
   List<Products> products = [];
 
-
   Future<void> getProducts() async {
     emit(HomeScreenGetProductsLoadingState());
     try {
@@ -23,8 +22,7 @@ class HomeScreenCubit extends Cubit<HomeScreenState> {
       http.get(url).then(
         (value) {
           var json = jsonDecode(value.body);
-           products =
-              (json as List).map((e) => Products.fromJson(e)).toList();
+          products = (json as List).map((e) => Products.fromJson(e)).toList();
           emit(HomeScreenGetProductsSuccessState());
         },
       );

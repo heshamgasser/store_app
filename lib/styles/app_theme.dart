@@ -52,7 +52,6 @@ class AppTheme {
       showSelectedLabels: false,
       showUnselectedLabels: false,
     ),
-
   );
 
   //
