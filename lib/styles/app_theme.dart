@@ -52,6 +52,14 @@ class AppTheme {
       showSelectedLabels: false,
       showUnselectedLabels: false,
     ),
+    //
+    // BottomAppBarTheme Theme
+    //
+    bottomAppBarTheme: BottomAppBarTheme(
+      color: Colors.transparent,
+      elevation: 0,
+    ),
+
   );
 
   //
@@ -102,6 +110,13 @@ class AppTheme {
       unselectedItemColor: AppColor.unSelectedBottomNavigationBarColor,
       showSelectedLabels: false,
       showUnselectedLabels: false,
+    ),
+    //
+    // BottomAppBarTheme Theme
+    //
+    bottomAppBarTheme: BottomAppBarTheme(
+      color: Colors.transparent,
+      elevation: 0,
     ),
   );
 }
