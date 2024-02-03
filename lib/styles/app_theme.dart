@@ -25,6 +25,9 @@ class AppTheme {
     //
     textTheme: TextTheme(
       titleLarge: AppText.lightTitleLarge,
+      titleSmall: AppText.lightTitleSmall,
+      bodyMedium: AppText.lightBodyMedium,
+      bodySmall: AppText.lightBodySmall,
     ),
     //
     // IconButton Theme
@@ -49,6 +52,7 @@ class AppTheme {
       showSelectedLabels: false,
       showUnselectedLabels: false,
     ),
+
   );
 
   //
@@ -73,6 +77,9 @@ class AppTheme {
     //
     textTheme: TextTheme(
       titleLarge: AppText.darkTitleLarge,
+      titleSmall: AppText.darkTitleSmall,
+      bodyMedium: AppText.darkBodyMedium,
+      bodySmall: AppText.darkBodySmall,
     ),
     //
     // IconButton Theme
