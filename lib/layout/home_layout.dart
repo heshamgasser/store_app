@@ -1,6 +1,3 @@
-
-
-
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
@@ -11,29 +8,21 @@ import 'package:store_app/cubits/home_layout_cubit/home_layout_state.dart';
 class HomeLayout extends StatelessWidget {
   static const String routeName = 'Home Layout';
 
-
-
-
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => HomeLayoutCubit(),
       child: BlocConsumer<HomeLayoutCubit, HomeLayoutStates>(
-       listenWhen: (previous, current) => previous != current,
+        listenWhen: (previous, current) => previous != current,
         listener: (context, state) {
           // TODO: implement listener
         },
         builder: (context, state) {
-
-          var homeBloc = BlocProvider.of<HomeLayoutCubit>(context, listen: true);
+          // var homeBloc =
+          //     BlocProvider.of<HomeLayoutCubit>(context, listen: true);
 
           return Scaffold(
             appBar: AppBar(
-              leading: IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.category),
-              ),
               title: Text(
                 'New Trend',
                 style: Theme.of(context).textTheme.titleLarge,
@@ -46,15 +35,15 @@ class HomeLayout extends StatelessWidget {
               ],
             ),
             bottomNavigationBar: BottomNavigationBar(
-              currentIndex: homeBloc.selectedIndex,
+              currentIndex: HomeLayoutCubit.get(context).selectedIndex,
               onTap: (value) {
                 //   add changeIndex Function
-                homeBloc.changeIndex(indexValue: value);
-                log(value.toString());
-                log(homeBloc.selectedIndex.toString());
+                HomeLayoutCubit.get(context).changeIndex(indexValue: value);
               },
               items: [
                 BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+                BottomNavigationBarItem(
+                    icon: Icon(Icons.category), label: 'Categories'),
                 BottomNavigationBarItem(
                     icon: Icon(Icons.search), label: 'Search'),
                 BottomNavigationBarItem(
@@ -65,7 +54,7 @@ class HomeLayout extends StatelessWidget {
                     icon: Icon(Icons.person), label: 'Profile'),
               ],
             ),
-            body: homeBloc.tabs[homeBloc.selectedIndex],
+            body: HomeLayoutCubit.get(context).tabs[HomeLayoutCubit.get(context).selectedIndex],
           );
         },
       ),
